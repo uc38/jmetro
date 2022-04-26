@@ -70,6 +70,7 @@ public class TextFieldWithButtonSkin extends TextFieldSkin{
         this.textField = textField;
 
         rightButton = new StackPane();
+        rightButton.setStyle("-fx-background-color: transparent;-fx-border-style: hidden solid hidden hidden; -fx-border-width: 10; -fx-border-color: transparent;");
         rightButton.setManaged(false);
         rightButton.getStyleClass().setAll("right-button");
         rightButton.setFocusTraversable(false);

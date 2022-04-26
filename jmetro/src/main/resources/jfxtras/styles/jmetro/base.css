@@ -107,6 +107,7 @@ totally specific, always using direct child, and cover all cases, which would be
 .label {
     -fx-text-fill: text_color;
     -fx-font-family: "Segoe UI";
+
 }
 
 /*====================== Text ===========================*/
@@ -118,6 +119,11 @@ Text {
 /*=================== Other styles ======================*/
 .text {
     -fx-font-family: "Segoe UI";
+}
+.loginText {
+    -fx-font-family: "Corbel Light";
+    -fx-font-size: 55;
+    -fx-fill: linear-gradient(to right, white, #8a8181);
 }
 
 .label.header, .label.header .text {
@@ -157,6 +163,11 @@ Text {
 .button:hover, .toggle-button:hover{
     -fx-border-color: border_hover_color;
 }
+
+.menuButtons:hover{
+    -fx-border-color: transparent;
+}
+
 
 .button:pressed, .toggle-button:pressed
 {
@@ -1501,8 +1512,8 @@ TextField {
 /********************* ListView List Cells ********************************/
 
 .list-view > .virtual-flow > .clipped-container > .sheet > .list-cell {
-    -fx-padding: 0.666667em 1em 0.666667em 1em; /* 8 12 8 12 */
-    -fx-font-family: "Segoe UI";
+    -fx-padding: 0.05em 0.2em 0.05em 0.2em; /* 8 12 8 12 */
+   /* -fx-font-family: "Segoe UI";*/
     -fx-text-fill: text_color;
 }
 
@@ -1514,19 +1525,19 @@ TextField {
 /* Hover style */
 .list-view > .virtual-flow > .clipped-container > .sheet > .list-cell:filled:hover,
 .list-view.alternating-row-colors > .virtual-flow > .clipped-container > .sheet > .list-cell:filled:hover {
-    -fx-background-color: cell_hover_color;
+    -fx-background-color: lightgray;
 }
 
 /* Pressed style */
 .list-view > .virtual-flow > .clipped-container > .sheet > .list-cell:filled:pressed,
 .list-view.alternating-row-colors > .virtual-flow > .clipped-container > .sheet > .list-cell:filled:pressed {
-    -fx-background-color: cell_pressed_color;
+    -fx-background-color: lightgray;
 }
 
 /* Selected style */
 .list-view > .virtual-flow > .clipped-container > .sheet > .list-cell:selected,
 .list-view.alternating-row-colors > .virtual-flow > .clipped-container > .sheet > .list-cell:selected {
-    -fx-background-color: cell_selected_color;
+    -fx-background-color: lightgray;
     -fx-background-insets: 0;
 
     -fx-text-fill: text_color;
@@ -1535,13 +1546,13 @@ TextField {
 /* Selected, Hover style */
 .list-view > .virtual-flow > .clipped-container > .sheet > .list-cell:filled:selected:hover,
 .list-view.alternating-row-colors > .virtual-flow > .clipped-container > .sheet > .list-cell:filled:selected:hover {
-    -fx-background-color: cell_selected_hover_color;
+    -fx-background-color: lightgray;
 }
 
 /* Selected, Hover, Pressed style */
 .list-view > .virtual-flow > .clipped-container > .sheet > .list-cell:filled:selected:hover:pressed,
 .list-view.alternating-row-colors > .virtual-flow > .clipped-container > .sheet > .list-cell:filled:selected:hover:pressed {
-    -fx-background-color: cell_selected_pressed_color;
+    -fx-background-color: lightgray;
 }
 
 /*******************************************************************************
@@ -1578,7 +1589,7 @@ TextField {
     -fx-text-fill: text_color;
     -fx-font-family: "Segoe UI SemiBold";
     -fx-font-size: 1em;  /* 12 */
-    -fx-alignment: center-left;
+    -fx-alignment: center;
 }
 
 .table-view .column-header:hover{
@@ -1664,13 +1675,13 @@ TextField {
 /* - when focused (with cell selection mode) */
 .table-view:focused > .virtual-flow > .clipped-container > .sheet > .table-row-cell .table-cell:selected,
 .table-view:focused > .virtual-flow > .clipped-container > .sheet > .table-row-cell:selected .table-cell {
-    -fx-background-color: cell_selected_color;
+    -fx-background-color: lightgrey;
     -fx-border-width: 0;
 }
 
 .table-view:focused > .virtual-flow > .clipped-container > .sheet > .table-row-cell .table-cell:selected:hover,
 .table-view:focused > .virtual-flow > .clipped-container > .sheet > .table-row-cell:selected:hover .table-cell{
-    -fx-background-color: cell_selected_hover_color;
+    -fx-background-color: lightgrey;
 }
 
 .table-view:focused > .virtual-flow > .clipped-container > .sheet > .table-row-cell .table-cell:selected > .text,
@@ -1681,7 +1692,7 @@ TextField {
 /* -- when row selection mode */
 
 .table-view:focused:row-selection > .virtual-flow > .clipped-container > .sheet > .table-row-cell:selected {
-    -fx-background-color: cell_selected_color;
+    -fx-background-color: lightgrey;
 }
 
 .table-view:focused:row-selection > .virtual-flow > .clipped-container > .sheet > .table-row-cell:selected:hover {
@@ -3108,4 +3119,48 @@ TextField {
     -fx-background-radius: 8px;
     -fx-padding: 8px;
     -fx-border-color: null;
+}
+
+.pagination > .pagination-control > .control-box {
+    -fx-spacing: 0;
+}
+
+
+.pagination > .pagination-control > .control-box > .number-button,
+.pagination > .pagination-control > .control-box > .bullet-button,
+.pagination > .pagination-control > .control-box > .left-arrow-button,
+.pagination > .pagination-control > .control-box > .right-arrow-button {
+    -fx-background-insets: 0, 1;
+    -fx-background-color: lightgray, #FAFAFA;
+    -fx-min-width: 30;
+    -fx-min-height: 30;
+}
+
+
+.pagination > .pagination-control > .control-box > .number-button:hover,
+.pagination > .pagination-control > .control-box > .bullet-button:hover,
+.pagination > .pagination-control > .control-box > .left-arrow-button:hover,
+.pagination > .pagination-control > .control-box > .right-arrow-button:hover {
+    -fx-background-insets: 0;
+    -fx-background-color: lightgray;
+}
+
+
+.pagination > .pagination-control > .control-box > .number-button:selected,
+.pagination > .pagination-control > .control-box > .bullet-button:selected{
+    -fx-background-insets: 0;
+    -fx-background-color: lightgray;
+    -fx-text-fill: black;
+}
+
+.loginBackground {
+    -fx-background-image: url("music4youBackground.png");
+    /*-fx-background-repeat: cover;
+   !* -fx-background-size: 900 506;*!
+    -fx-background-position: center center;*/
+    -fx-background-size: cover;
+    -fx-background-repeat: no-repeat;
+  /*  -fx-background-width: 100%;
+    -fx-background-height: auto;*/
+    -fx-effect: dropshadow(three-pass-box, black, 30, 0.5, 0, 0);
 }
