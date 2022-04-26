@@ -1525,7 +1525,7 @@ TextField {
 /* Hover style */
 .list-view > .virtual-flow > .clipped-container > .sheet > .list-cell:filled:hover,
 .list-view.alternating-row-colors > .virtual-flow > .clipped-container > .sheet > .list-cell:filled:hover {
-    -fx-background-color: lightgray;
+    -fx-background-color: cell_hover_color;
 }
 
 /* Pressed style */
